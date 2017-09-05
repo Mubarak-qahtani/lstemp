@@ -1,6 +1,8 @@
 #include<stdio.h> /* required for file operations */
 //fopen, fclose, fgets, fputs, fscanf
 
+#include <string.h>	//strncmp
+
 
 float cpu_temp;
 
