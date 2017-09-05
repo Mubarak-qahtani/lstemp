@@ -30,8 +30,7 @@ void print_help_menu()
 	printf("\n");
         printf("Options:\n");
         printf("  -h, --help                    Help Menu\n");
-        printf("  -V, --Version                 Display the curent version\n");
-//      printf("  -v                            View PIN(s) status\n");
+        printf("  -v, --version                 Display the curent version\n");
         printf("  -c				Display Temp in Celsius only\n");
         printf("  -f				Display Temp in Fehrenheit only\n");
         printf("\n");
@@ -68,15 +67,15 @@ int main(int argc, char* argv[])
 	else
 	{
 		if(argc < 2 || strncmp(argv[1], "-f", 2) != 0)
-			printf("CPU temp = %4.2f 'C", cpu_temp);
+			printf("CPU temp = %4.2f 'C\n", cpu_temp);
 
 		;
 		if(argc < 2 || strncmp(argv[1], "-c", 2) != 0)
 		{
 			cpu_temp = 32.0 + 1.8 * cpu_temp;
-			printf(", %5.2f 'F", cpu_temp);
+			printf("CPU temp = %5.2f 'F\n", cpu_temp);
 		}
-		printf("\n");
+
 	}
 
 	return 0;
